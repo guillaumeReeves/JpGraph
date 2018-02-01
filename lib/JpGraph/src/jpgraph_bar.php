@@ -679,6 +679,13 @@ class BarPlot extends Plot {
 class GroupBarPlot extends BarPlot {
     public $plots; 
     private $nbrplots=0;
+
+    //Getting rid of the deprecated warning in php > 7.0
+    public function __construct($plots)
+    {
+        $this->GroupBArPlot($plots);
+    }
+
     //---------------
     // CONSTRUCTOR
     function GroupBarPlot($plots) {
